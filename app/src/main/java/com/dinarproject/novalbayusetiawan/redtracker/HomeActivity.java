@@ -35,7 +35,9 @@ public class HomeActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(mAuth.getCurrentUser() == null){
                     startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                    mAuth.removeAuthStateListener(mAuthListener);
                     finish();
+
                 }
 
             }
@@ -67,5 +69,10 @@ public class HomeActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 }

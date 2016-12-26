@@ -60,15 +60,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    // User is signed in
-//                    Log.d("Sign in", "onAuthStateChanged:signed_in:" + user.getUid());
+                if (mAuth.getCurrentUser() != null) {
                     startActivity(new Intent(MainActivity.this, HomeActivity.class));
-                } else {
-                    // User is signed out
-                    Log.d("Sign Out", "onAuthStateChanged:signed_out");
+                    finish();
                 }
-                // ...
             }
         };
 
@@ -110,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
+//        if (mAuthListener != null) {
+//            mAuth.removeAuthStateListener(mAuthListener);
+//        }
     }
 
     private void ProsesLogin(String email, String password){
@@ -132,8 +127,8 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                         }else{
                             Log.d("Sign Berhasil", "signInWithEmail:onComplete:" + task.isSuccessful());
-                            Intent i = new Intent(MainActivity.this, HomeActivity.class);
-                            startActivity(i);
+//                            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                            startActivityForResult(new Intent(MainActivity.this, HomeActivity.class),1);
                             finish();
                         }
                     }
@@ -143,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void ProsesLoginGoogle() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        pd.setMessage("loading");
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
