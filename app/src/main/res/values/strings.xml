@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RedTracker</string>
+    <string name="masuk_dengan_google">Masuk dengan Google</string>
+    <string name="masuk">Masuk</string>
+    <string name="email">Email</string>
+    <string name="auth_failed">auth gagal</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="no_one">No One</string>
+</resources>

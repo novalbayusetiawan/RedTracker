@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "297119094198",
+    "firebase_url": "https://red-tracker-104ad.firebaseio.com",
+    "project_id": "red-tracker-104ad",
+    "storage_bucket": "red-tracker-104ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297119094198:android:b43db37a63369c37",
+        "android_client_info": {
+          "package_name": "com.dinarproject.novalbayusetiawan.redtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297119094198-455cuqk0hpeaa1d5ddklpobh46pbv9u1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALfgL4Yd9oBK0BkGmc69HhV610YiJFc_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
