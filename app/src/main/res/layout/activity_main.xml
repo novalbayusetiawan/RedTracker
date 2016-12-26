@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Password"
+        android:hint="@string/password"
         android:id="@+id/pwd" />
 
     <Button
@@ -32,16 +32,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonLogin" />
+    <Button
+        android:text="@string/daftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonDaftar" />
     <View
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
-    <Button
-        android:text="@string/masuk_dengan_google"
+
+    <com.google.android.gms.common.SignInButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonGoogle" />
+        android:id="@+id/buttonGoogle"
+        >
+
+    </com.google.android.gms.common.SignInButton>
 
 </LinearLayout>

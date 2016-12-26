@@ -6,4 +6,6 @@
     <string name="auth_failed">auth gagal</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="no_one">No One</string>
+    <string name="daftar">Daftar</string>
+    <string name="password">Password</string>
 </resources>

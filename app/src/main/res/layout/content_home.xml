@@ -13,6 +13,12 @@
     tools:context="com.dinarproject.novalbayusetiawan.redtracker.HomeActivity"
     tools:showIn="@layout/activity_home">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLogout"
+        android:text="Logout"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
